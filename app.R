@@ -40,6 +40,7 @@ ui <- fluidPage(theme = shinytheme('cyborg'),
                                h1("Welcome to the Spotify User Analysis Tool!"),
                                h6("Here you can see different analysis of your music"),
                                h6("Click one of the tabs above and learn more about your music"),
+                               tags$a(href="https://github.com/adarisa/Data-Science-group-project", h6("For full UI code, Click Here!")),
                                br(),br(),
                                h5("Meet the team!"),
                                br(),
@@ -121,7 +122,73 @@ ui <- fluidPage(theme = shinytheme('cyborg'),
                                 
                               ) #tabsetPanel2
                              
-                    ) # tabPanel2
+                    ),# tabPanel2
+                    
+                    tabPanel("Analysis",
+                             tabsetPanel(
+                               tabPanel("Genre Analysis",
+                                        fixedRow(
+                                          column(4, offset = 3,
+                                                 br(),
+                                                 h6("Which genre has the most released tracks in each year?"),
+                                                 br(),
+                                                 tags$img(src = "https://github.com/adarisa/Data-Science-group-project/blob/main/Which%20genre%20has%20the%20most%20released%20tracks%20in%20each%20year.jpg?raw=true",
+                                                          height = 400, width = 400)),
+                                          
+                                          column(4, 
+                                                 br(),
+                                                 h6("When were the tracks released?"),
+                                                 br(),
+                                                 tags$img(src = "https://github.com/adarisa/Data-Science-group-project/blob/main/Release%20of%20songs%20across%20the%20years.jpg?raw=true",
+                                                          height = 400, width = 400),
+                                        
+                                                
+                                                 
+                                                 )),
+                                        fixedRow(
+                                          column(4, offset = 5,
+                                                 br(),
+                                                 h6("How many tracks are released based on genre?"),
+                                                 br(),
+                                                 tags$img(src = "https://github.com/adarisa/Data-Science-group-project/blob/main/How%20many%20tracks%20are%20released%20based%20on%20genre.png.jpg?raw=true",
+                                                          height = 400, width = 400)),
+                                        ),
+                                        br(),br(),
+                                        ),
+                                        
+                               tabPanel("Artist Analysis", 
+                                        fixedRow(
+                                          column(4, offset = 5,
+                                                 br(),
+                                                 h6("Which artist has the most releases? "),
+                                                 br(),
+                                                 tags$img(src = "https://github.com/adarisa/Data-Science-group-project/blob/main/Which%20artist%20has%20the%20most%20releases.jpg?raw=true",
+                                                          height = 400, width = 500))),
+                                        fixedRow(
+                                          column(4, offset = 5,
+                                                 br(),
+                                                 h6("How many artists that released tracks? "),
+                                                 br(),
+                                                 tags$img(src = "https://github.com/adarisa/Data-Science-group-project/blob/main/How%20many%20artists%20that%20released%20tracks%20based%20on%20genre.jpg?raw=true",
+                                                          height = 400, width = 500))),
+                                        br(),
+                                        ),
+                               
+                               tabPanel("Popularity Analysis",
+                                        column(4, offset = 5,
+                                               br(),
+                                               h6("What are the most popular words featuring in titles?"),
+                                               br(),
+                                               tags$img(src = "https://github.com/adarisa/Data-Science-group-project/blob/main/What%20are%20the%20popular%20words%20featuring%20in%20titles.jpg?raw=true",
+                                                        height = 400, width = 500)))
+                               
+                               ),
+                                         
+
+      
+                             
+                             
+                    ), # tabPanel3
                     
                   ) #tabsetPanel1
                   
