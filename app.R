@@ -175,12 +175,24 @@ ui <- fluidPage(theme = shinytheme('cyborg'),
                                         ),
                                
                                tabPanel("Popularity Analysis",
-                                        column(4, offset = 5,
-                                               br(),
-                                               h6("What are the most popular words featuring in titles?"),
-                                               br(),
-                                               tags$img(src = "https://github.com/adarisa/Data-Science-group-project/blob/main/What%20are%20the%20popular%20words%20featuring%20in%20titles.jpg?raw=true",
-                                                        height = 400, width = 500)))
+                                        fixedRow(
+                                          column(4, offset = 4,
+                                                        br(),
+                                                        h6("What are the most popular words featuring in titles?"),
+                                                        br(),
+                                                        tags$img(src = "https://github.com/adarisa/Data-Science-group-project/blob/main/What%20are%20the%20popular%20words%20featuring%20in%20titles.jpg?raw=true",
+                                                                 height = 400, width = 500))),
+                                        
+                                        fixedRow(
+                                          column(4, offset = 3,
+                                                 br(),
+                                                 h6("Who are the top ten artists and what are their most famous tracks?"),
+                                                 br(),
+                                                 tags$img(src = "https://github.com/adarisa/Data-Science-group-project/blob/main/Who%20are%20the%20top%20ten%20artists%20and%20what%20are%20their%20most%20famous%20tracks.png.jpg?raw=true",
+                                                          height = 500, width = 700)))
+                               
+                                        )
+                                        
                                
                                ),
                                          
