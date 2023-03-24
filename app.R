@@ -14,23 +14,25 @@ ui <- fluidPage(theme = shinytheme('cyborg'),
                     tabPanel("Intro",
                              sidebarPanel(
                                tags$img(src = "https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png",
-                                        height = 140, width = 400), 
-                               br(),br(),
+                                        height = 140, width = 400),
                                
+                               br(),br(),
                                h6(strong("Team name: ")),
                                h6("Five Directions"),
                                
                                br(),
-                               
                                h6(strong("Title of the project:")),
                                h6("Analysis of Spotify songs"),
                                
                                br(),
-                               
                                h6(strong("Problem Statement:")),
-                               h6("blablabla")
+                               h6("Limited song recommendation."),
                                
-                               
+                               br(),
+                               h6(strong("Goal:")),
+                               h6("1.Analyzing and predicting or recommending the song that is suitable for the listener based on the genre."),
+                               h6("2.Analyzing and predicting or recommending the song that is suitable for the listener based on the popularity.")
+
                                
                               ),# sidebarPanel
                              
@@ -58,18 +60,18 @@ ui <- fluidPage(theme = shinytheme('cyborg'),
                                                  height = 140, width = 140),
                                         h6(strong("Najiha"))
                                         ),
-                                column(2, 
+                                 column(2, 
                                        tags$img(src = "https://media.licdn.com/dms/image/C5603AQFMSkE0xts94Q/profile-displayphoto-shrink_800_800/0/1662047632478?e=2147483647&v=beta&t=d4puaw5iRp6i9Gwp3TtTBb7joHWvBnz71etY6euDCJM",
                                                 height = 140, width = 140),
                                        h6(strong("Syazwani"))
                                        ),
-                               column(2, 
-                                      tags$img(src = "https://media.licdn.com/dms/image/C5603AQGObfzQNK7jyA/profile-displayphoto-shrink_800_800/0/1624544981722?e=2147483647&v=beta&t=sH62xeG9CDAXWUKmDplh8pYfEViysUWsIugJAiKkWsA",
+                                 column(2, 
+                                       tags$img(src = "https://media.licdn.com/dms/image/C5603AQGObfzQNK7jyA/profile-displayphoto-shrink_800_800/0/1624544981722?e=2147483647&v=beta&t=sH62xeG9CDAXWUKmDplh8pYfEViysUWsIugJAiKkWsA",
                                                height = 140, width = 140),
-                                      h6(strong("Adam"))
-                               )
+                                       h6(strong("Adam"))
+                                       )
                         
-                                 )
+                                )
                                  
                                
                              ) # mainPanel
@@ -107,7 +109,7 @@ ui <- fluidPage(theme = shinytheme('cyborg'),
                                                                   unique(songs$track_artist), multiple = FALSE),
                                            verbatimTextOutput("Ed Sheeran"),
                                            
-                                           sliderInput(inputId = "range_2", label = "Range of Ratings that you wish to read?",
+                                           sliderInput(inputId = "range_2", label = "Range of ratings that you wish to read?",
                                                        min = min(songs$track_popularity), max = 100, value = c(55,100))),
                                          
                                          mainPanel(
